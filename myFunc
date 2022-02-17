@@ -1,3 +1,4 @@
+from sys import stdin
 def myFunc(stdin):
     inputs = []
     for line in stdin:
