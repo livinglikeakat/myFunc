@@ -1,0 +1,35 @@
+def myFunc(stdin):
+    inputs = []
+    for line in stdin:
+        n = int(line)
+        inputs = list.append(n)
+    def unique(list_):
+        unique_l = []
+        for x in list_:
+            if x not in unique_l:
+                unique_l.append(x)
+        return unique_l
+
+    check = []
+
+    unique_list = unique(inputs)
+
+    for i in unique_list:
+        count = 0
+        for item in inputs:
+            if i == item:
+                count += 1
+        check.append(count)
+
+    max_value = max(check)
+
+    check_index = []
+    list_out = []
+
+    for i in range(len(check)):
+        if check[i] == max_value:
+            check_index.append(i)
+            list_out.append(unique_list[i])
+
+    min_value = min(list_out)
+    return print(min_value)
